@@ -1,47 +1,33 @@
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
+pragma solidity >= 0.8.26;
+contract store{
+    int number1;
+    uint number2;
+    bool a;
+    string b;
 
-pragma solidity 0.8.26;
-
-contract CheckSolidity
-{
-    uint  myUint;
-    string  myName;
-    bool  myCheck;
-    address  myAddress;
-
-    function setMyUint(uint _myUint) public returns (uint256) {
-        myUint = _myUint;
-        return myUint;
+    function setint(int _number1) public{
+        number1=_number1;
     }
-
-    function getMyUint() public view returns (uint) {
-        return myUint;
+    function getint() public view returns(int){
+        return number1;
     }
-
-    function setMyString(string memory _myName) public returns (string memory) {
-        myName = _myName;
-        return myName;
+    function setuint(uint _number2) public{
+        number2=_number2;
     }
-
-    function getMyString() public view returns (string memory) {
-        return myName;
+    function getunit()public view returns(uint){
+        return number2;
     }
-
-    function setMyBool(bool _myCheck) public returns (bool) {
-        myCheck = _myCheck;
-        return myCheck;
+    function setboolean(bool _a)public{
+        a=_a;
     }
-
-    function getMyBool() public view returns (bool) {
-        return myCheck;
+    function getboolean() public view returns(bool){
+        return a;
     }
-
-    function setMyAddress(address _myAddress) public returns (address) {
-        myAddress = _myAddress;
-        return myAddress;
+    function setstring(string memory _b) public {
+        b=_b;
     }
-
-    function getMyAddress() public view returns (address) {
-        return myAddress;
+    function getstring()public view returns(string memory){
+        return b;
     }
 }
